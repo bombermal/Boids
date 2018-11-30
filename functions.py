@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
-def calcNewPosition(border, borderSpeed, width, height, bird):
-    if bird.positionX < border:
-        bird.speedX += borderSpeed
-    if bird.positionY < border:
-        bird.speedY += borderSpeed
-    if bird.positionX > (width - border):
-        bird.speedX -= borderSpeed
-    if bird.positionY > (height - border):
-        bird.speedY -= borderSpeed
+
+import numpy as np
+
+def chooseRandomLeader(birdsList):
+    aux = np.random.choice(birdsList)
+    aux.leader = True
+    
+def normalise(vector):
+    """
+        esse lambda eleva cada elemento do vetor ao quadrado e depois soma tudo
+        em seguida, step recebe o valor do somatório e eleva a 0.5
+    """
+    step = (np.sum([(lambda x: x*x)(x) for x in vector]))**.5
+    if step != 0:
+        vector = vector/step
         
-def updatePosition(bird):
-    bird.positionX += bird.speedX
-    bird.positionY += bird.speedY
+    return vector
