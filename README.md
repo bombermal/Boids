@@ -5,18 +5,18 @@ Boids simulation in pygame - 30/10/2018
 - Gráfico
   - Criar interface
   - [ ] Recebe uma lista de objetos.
-  - [ ] Desenha pontos na tela
+  - [x] Desenha pontos na tela
     
 - Lógico
   - Criar um objeto
     - Simular seu movimento
     - [ ] Definir alvo
-    - [ ] Movimentar-se
+    - [x] Movimentar-se
   - Criar outros objetos
-    - [ ] Programar o alinhamento
-    - [ ] Definir líder
-    - [ ] Programar coesão
-    - [ ] Programar respulsão ( colisão )
+    - [x] Programar o alinhamento
+    - [x] Definir líder
+    - [x] Programar coesão
+    - [x] Programar respulsão ( colisão )
     
     
 ### Extra:
