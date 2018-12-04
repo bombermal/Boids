@@ -4,7 +4,10 @@ import numpy as np
 
 def chooseRandomLeader(birdsList):
     aux = np.random.choice(birdsList)
-    aux.leader = True
+    if aux.leader == True:
+        chooseRandomLeader(birdsList)
+    else:
+        aux.leader = True
     
 def normalise(vector):
     """
